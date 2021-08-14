@@ -1,0 +1,74 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 63/63   #P:2
+#
+#                                _-----=> irqs-off
+#                               / _----=> need-resched
+#                              | / _---=> hardirq/softirq
+#                              || / _--=> preempt-depth
+#                              ||| /     delay
+#           TASK-PID     CPU#  ||||   TIMESTAMP  FUNCTION
+#              | |         |   ||||      |         |
+              sh-17399   [001] .... 46313.899828: sched_process_exit: comm=sh pid=17399 prio=120
+              sh-17399   [001] d... 46313.899837: sched_stat_runtime: comm=sh pid=17399 runtime=644048 [ns] vruntime=132129807 [ns]
+              sh-17399   [001] dN.. 46313.899841: sched_waking: comm=python3 pid=17393 prio=120 target_cpu=000
+              sh-17399   [001] dN.. 46313.899859: sched_stat_runtime: comm=sh pid=17399 runtime=20636 [ns] vruntime=418504196550 [ns]
+          <idle>-0       [000] dNh. 46313.899919: sched_wakeup: comm=python3 pid=17393 prio=120 target_cpu=000
+          <idle>-0       [000] d... 46313.899937: sched_switch: prev_comm=swapper/0 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=python3 next_pid=17393 next_prio=120
+              sh-17399   [001] d... 46313.899938: sched_switch: prev_comm=sh prev_pid=17399 prev_prio=120 prev_state=Z ==> next_comm=swapper/1 next_pid=0 next_prio=120
+          <idle>-0       [001] d... 46313.899942: sched_waking: comm=kworker/1:1 pid=17341 prio=120 target_cpu=001
+          <idle>-0       [001] dN.. 46313.899944: sched_wakeup: comm=kworker/1:1 pid=17341 prio=120 target_cpu=001
+          <idle>-0       [001] d... 46313.899945: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=kworker/1:1 next_pid=17341 next_prio=120
+     kworker/1:1-17341   [001] d... 46313.899950: sched_stat_runtime: comm=kworker/1:1 pid=17341 runtime=6832 [ns] vruntime=418498203382 [ns]
+     kworker/1:1-17341   [001] d... 46313.899950: sched_switch: prev_comm=kworker/1:1 prev_pid=17341 prev_prio=120 prev_state=I ==> next_comm=swapper/1 next_pid=0 next_prio=120
+         python3-17393   [000] d... 46313.900012: sched_stat_runtime: comm=python3 pid=17393 runtime=102061 [ns] vruntime=76012874 [ns]
+         python3-17393   [000] .... 46313.900033: sched_process_fork: comm=python3 pid=17393 child_comm=python3 child_pid=17400
+         python3-17393   [000] d... 46313.900037: sched_wakeup_new: comm=python3 pid=17400 prio=120 target_cpu=001
+         python3-17393   [000] d... 46313.900056: sched_stat_runtime: comm=python3 pid=17393 runtime=42905 [ns] vruntime=76055779 [ns]
+         python3-17393   [000] d... 46313.900058: sched_switch: prev_comm=python3 prev_pid=17393 prev_prio=120 prev_state=D ==> next_comm=swapper/0 next_pid=0 next_prio=120
+          <idle>-0       [001] d... 46313.900096: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=python3 next_pid=17400 next_prio=120
+              sh-17400   [001] d... 46313.900229: sched_waking: comm=python3 pid=17393 prio=120 target_cpu=000
+          <idle>-0       [000] dNh. 46313.900328: sched_wakeup: comm=python3 pid=17393 prio=120 target_cpu=000
+              sh-17400   [001] .... 46313.900329: sched_process_exec: filename=/bin/sh pid=17400 old_pid=17400
+          <idle>-0       [000] d... 46313.900331: sched_switch: prev_comm=swapper/0 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=python3 next_pid=17393 next_prio=120
+         python3-17393   [000] .... 46313.900346: sched_process_wait: comm=python3 pid=17400 prio=120
+         python3-17393   [000] d... 46313.900347: sched_stat_runtime: comm=python3 pid=17393 runtime=21929 [ns] vruntime=76077708 [ns]
+         python3-17393   [000] d... 46313.900349: sched_switch: prev_comm=python3 prev_pid=17393 prev_prio=120 prev_state=S ==> next_comm=swapper/0 next_pid=0 next_prio=120
+              sh-17400   [001] .... 46313.900875: sched_process_exit: comm=sh pid=17400 prio=120
+              sh-17400   [001] d... 46313.900879: sched_stat_runtime: comm=sh pid=17400 runtime=844067 [ns] vruntime=138973869 [ns]
+              sh-17400   [001] dN.. 46313.900884: sched_waking: comm=python3 pid=17393 prio=120 target_cpu=000
+              sh-17400   [001] dN.. 46313.900903: sched_stat_runtime: comm=sh pid=17400 runtime=22143 [ns] vruntime=418505294915 [ns]
+              sh-17400   [001] d... 46313.900905: sched_switch: prev_comm=sh prev_pid=17400 prev_prio=120 prev_state=Z ==> next_comm=swapper/1 next_pid=0 next_prio=120
+          <idle>-0       [001] d... 46313.900926: sched_waking: comm=kworker/1:1 pid=17341 prio=120 target_cpu=001
+          <idle>-0       [001] dN.. 46313.900927: sched_wakeup: comm=kworker/1:1 pid=17341 prio=120 target_cpu=001
+          <idle>-0       [001] d... 46313.900928: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=kworker/1:1 next_pid=17341 next_prio=120
+     kworker/1:1-17341   [001] d... 46313.900932: sched_stat_runtime: comm=kworker/1:1 pid=17341 runtime=5850 [ns] vruntime=418499300765 [ns]
+     kworker/1:1-17341   [001] d... 46313.900933: sched_switch: prev_comm=kworker/1:1 prev_pid=17341 prev_prio=120 prev_state=I ==> next_comm=swapper/1 next_pid=0 next_prio=120
+          <idle>-0       [000] dNh. 46313.900989: sched_wakeup: comm=python3 pid=17393 prio=120 target_cpu=000
+          <idle>-0       [000] d... 46313.900992: sched_switch: prev_comm=swapper/0 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=python3 next_pid=17393 next_prio=120
+         python3-17393   [000] d... 46313.902294: sched_waking: comm=kworker/u256:1 pid=17383 prio=120 target_cpu=001
+         python3-17393   [000] d... 46313.902359: sched_stat_runtime: comm=python3 pid=17393 runtime=1373099 [ns] vruntime=77450807 [ns]
+         python3-17393   [000] .... 46313.902367: sched_process_fork: comm=python3 pid=17393 child_comm=python3 child_pid=17401
+          <idle>-0       [001] dNh. 46313.902369: sched_wakeup: comm=kworker/u256:1 pid=17383 prio=120 target_cpu=001
+         python3-17393   [000] d... 46313.902373: sched_wakeup_new: comm=python3 pid=17401 prio=120 target_cpu=001
+          <idle>-0       [001] d... 46313.902374: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=kworker/u256:1 next_pid=17383 next_prio=120
+         python3-17393   [000] d... 46313.902374: sched_stat_runtime: comm=python3 pid=17393 runtime=14751 [ns] vruntime=77465558 [ns]
+  kworker/u256:1-17383   [001] d... 46313.902379: sched_waking: comm=gnome-terminal- pid=16958 prio=120 target_cpu=001
+  kworker/u256:1-17383   [001] d... 46313.902382: sched_stat_runtime: comm=kworker/u256:1 pid=17383 runtime=9305 [ns] vruntime=418499304220 [ns]
+  kworker/u256:1-17383   [001] d... 46313.902383: sched_wakeup: comm=gnome-terminal- pid=16958 prio=120 target_cpu=001
+         python3-17393   [000] d... 46313.902384: sched_stat_runtime: comm=kworker/u256:1 pid=17383 runtime=3649 [ns] vruntime=418499307869 [ns]
+         python3-17393   [000] d... 46313.902385: sched_migrate_task: comm=python3 pid=17401 prio=120 orig_cpu=1 dest_cpu=0
+  kworker/u256:1-17383   [001] d... 46313.902386: sched_stat_runtime: comm=kworker/u256:1 pid=17383 runtime=2760 [ns] vruntime=418499310629 [ns]
+         python3-17393   [000] d... 46313.902386: sched_stat_runtime: comm=python3 pid=17393 runtime=12276 [ns] vruntime=77477834 [ns]
+  kworker/u256:1-17383   [001] d... 46313.902387: sched_switch: prev_comm=kworker/u256:1 prev_pid=17383 prev_prio=120 prev_state=I ==> next_comm=gnome-terminal- next_pid=16958 next_prio=120
+         python3-17393   [000] d... 46313.902388: sched_switch: prev_comm=python3 prev_pid=17393 prev_prio=120 prev_state=D ==> next_comm=python3 next_pid=17401 next_prio=120
+ gnome-terminal--16958   [001] d... 46313.902470: sched_stat_runtime: comm=gnome-terminal- pid=16958 runtime=82830 [ns] vruntime=2921211665 [ns]
+ gnome-terminal--16958   [001] d... 46313.902476: sched_switch: prev_comm=gnome-terminal- prev_pid=16958 prev_prio=120 prev_state=S ==> next_comm=swapper/1 next_pid=0 next_prio=120
+         python3-17401   [000] d... 46313.902497: sched_waking: comm=python3 pid=17393 prio=120 target_cpu=000
+         python3-17401   [000] d... 46313.902498: sched_stat_runtime: comm=python3 pid=17401 runtime=111523 [ns] vruntime=87565970 [ns]
+         python3-17401   [000] dN.. 46313.902499: sched_wakeup: comm=python3 pid=17393 prio=120 target_cpu=000
+         python3-17401   [000] d... 46313.902515: sched_switch: prev_comm=python3 prev_pid=17401 prev_prio=120 prev_state=R+ ==> next_comm=python3 next_pid=17393 next_prio=120
+         python3-17393   [000] .... 46313.902527: sched_process_wait: comm=python3 pid=17401 prio=120
+         python3-17393   [000] d... 46313.902529: sched_stat_runtime: comm=python3 pid=17393 runtime=30645 [ns] vruntime=81596615 [ns]
+         python3-17393   [000] d... 46313.902531: sched_switch: prev_comm=python3 prev_pid=17393 prev_prio=120 prev_state=S ==> next_comm=python3 next_pid=17401 next_prio=120
+         python3-17401   [000] .... 46313.902575: sched_process_exec: filename=/bin/sh pid=17401 old_pid=17401
