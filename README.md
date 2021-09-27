@@ -9,15 +9,30 @@ https://gitee.com/openeuler-competition/summer-2021/issues/I3EG0M
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. 
+```
+$ git clone https://gitee.com/openeuler-competition/summer2021-42.git 
+```
+2.  
+```
+$ cd summer2021-42 
+```
+
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  
+```
+$ sudo cat /sys/kernel/debug/tracing/trace > trace.log
+```
+2.  
+```
+$ python3 tool.py
+```
+3.  
+```
+$ python3 tool-detailed.py
+```
 
 #### 参与贡献
 
