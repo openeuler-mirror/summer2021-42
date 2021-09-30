@@ -4,16 +4,16 @@
 https://gitee.com/openeuler-competition/summer-2021/issues/I3EG0M
 
 #### 软件架构
-软件架构说明
-
+软件架构说明  
+![Image text](https://gitee.com/openeuler-competition/summer2021-42/raw/master/test/framework.png)
 
 #### 安装教程
 
-1. 
+1. 以openEuler为例，一般现在的linux发行版内核都有配置好的ftrace，可以直接克隆本仓库；否则应先配置ftrace
 ```
 $ git clone https://gitee.com/openeuler-competition/summer2021-42.git 
 ```
-2.  
+2.  成功更改所在目录，说明安装成功
 ```
 $ cd summer2021-42 
 ```
@@ -21,15 +21,15 @@ $ cd summer2021-42
 
 #### 使用说明
 
-1.  
+1.  参考仓库内的test.py，根据自己的需要使用ftrace，然后将输出的原始数据保存到本目录下
 ```
 $ sudo cat /sys/kernel/debug/tracing/trace > trace.log
 ```
-2.  
+2.  查看系统所有的调度延迟及发生时间点
 ```
 $ python3 tool.py
 ```
-3.  
+3.  如果想查看更多调度细节
 ```
 $ python3 tool-detailed.py
 ```
